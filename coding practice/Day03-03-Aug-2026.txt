@@ -1,0 +1,31 @@
+# Ansible
+- hosts: all
+  become: yes
+  tasks:
+    - user:
+        name: pathnex-admin
+
+# Terraform
+resource "aws_security_group" "sg" {
+  name = "PathnexSG"
+}
+
+# Kubernetes
+env:
+- name: APP_ENV
+  value: "production"
+
+# Shell Script
+#!/bin/bash
+[ -f "/tmp/pathnex.txt" ] && echo "Exists" || echo "Not Found"
+
+# Jenkins
+npm install
+npm test
+npm run build
+
+# GitLab CI
+stages:
+- install
+- test
+- build

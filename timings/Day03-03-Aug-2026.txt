@@ -1,0 +1,15 @@
+Day 03
+
+Completed:
+- Ansible User Creation
+- Terraform Security Group
+- Kubernetes Environment Variables
+- Shell Script
+- Jenkins NodeJS Pipeline
+- GitLab CI Pipeline
+
+Time Spent: 3 Hours
+
+Tomorrow:
+- Docker
+- Dockerfile
