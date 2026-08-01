@@ -1,0 +1,36 @@
+# Ansible (Fixed)
+- hosts: all
+  become: yes
+  tasks:
+    - name: Install nginx
+      yum:
+        name: nginx
+        state: present
+
+# Terraform (Fixed)
+resource "aws_instance" "ec2" {
+  ami           = "ami-0xyz"
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "Broken"
+  }
+}
+
+# Kubernetes (Fixed)
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pathnex
+spec:
+  containers:
+  - name: app
+    image: nginx
+
+# Jenkins (Debug)
+mvn clean compile || exit 1
+mvn test || exit 1
+
+# GitLab CI (Debug)
+build
+test

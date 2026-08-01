@@ -1,0 +1,14 @@
+Day 06
+
+Completed:
+- Fixed Ansible Playbook
+- Fixed Terraform Code
+- Fixed Kubernetes YAML
+- Jenkins Pipeline Debugging
+- GitLab CI Debugging
+
+Time Spent: 3 Hours
+watch youtube video  and  lab pratice daily wise and revson 
+Tomorrow:
+- Revision
+- Practice
