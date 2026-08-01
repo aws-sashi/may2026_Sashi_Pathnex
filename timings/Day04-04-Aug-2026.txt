@@ -1,0 +1,14 @@
+Day 04
+
+Completed:
+- Ansible Multiple Packages
+- Terraform Key Pair
+- Kubernetes ClusterIP Service
+- Jenkins Parallel Build
+- GitLab Parallel Jobs
+
+Time Spent: 3 Hours
+
+Tomorrow:
+- Docker
+- AWS

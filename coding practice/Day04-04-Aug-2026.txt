@@ -1,0 +1,35 @@
+# Ansible
+- hosts: all
+  become: yes
+  tasks:
+    - yum:
+        name:
+          - git
+          - wget
+        state: present
+
+# Terraform
+resource "aws_key_pair" "key" {
+  key_name = "PathnexKey"
+}
+
+resource "aws_instance" "ec2" {
+  instance_type = "c6i.8xlarge"
+  key_name      = aws_key_pair.key.key_name
+}
+
+# Kubernetes
+kind: Service
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+
+# Jenkins
+Parallel:
+- Build
+- Test
+
+# GitLab CI
+stages:
+- build-test
