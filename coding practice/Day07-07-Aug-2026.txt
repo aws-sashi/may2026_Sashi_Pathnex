@@ -1,0 +1,76 @@
+i========================
+Ansible
+========================
+
+---
+- name: Install Nginx
+  hosts: all
+  become: yes
+
+  tasks:
+    - package:
+        name: nginx
+        state: present
+
+========================
+Terraform
+========================
+
+resource "aws_instance" "server" {
+
+  ami           = "ami-0abcd1234"
+
+  instance_type = "m5.large"
+
+  tags = {
+    Name = "Day07-Server"
+  }
+
+}
+
+========================
+Kubernetes
+========================
+
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: nginx-app
+
+spec:
+  replicas: 2
+
+========================
+Shell Script
+========================
+
+#!/bin/bash
+
+echo "Current Date:"
+date
+
+echo "System Uptime:"
+uptime
+
+========================
+Jenkins
+========================
+
+Parameter:
+ENVIRONMENT=dev
+
+Deploy Stage
+
+echo "Deploying to $ENVIRONMENT"
+
+========================
+GitLab CI
+========================
+
+variables:
+  ENVIRONMENT: dev
+
+deploy:
+  script:
+    - echo "Deploying..."
