@@ -1,0 +1,13 @@
+Today's Work
+
+- Git Basics
+- GitHub Repository Setup
+- Folder Structure Practice
+- 30 Minutes Linux
+
+Tomorrow
+
+- Git Branch
+- Pull Request
+- Merge
+- Jenkins Revision
