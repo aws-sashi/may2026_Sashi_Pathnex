@@ -1,0 +1,46 @@
+Day 02 - Services & Tags
+
+Today's Topics
+
+1. Ansible
+   - Install Nginx
+   - Start and Enable Nginx Service
+
+2. Terraform
+   - Launch EC2 Instance
+   - Add Resource Tags
+
+3. Kubernetes
+   - Deployment
+   - Replicas
+   - Labels
+   - Container Port
+
+4. Shell Scripting
+   - Check Disk Usage using df -h
+
+5. Jenkins
+   - Maven Pipeline
+   - Compile
+   - Test
+   - Package
+
+6. GitLab CI/CD
+   - Build Stage
+   - Test Stage
+   - Package Stage
+
+Time Spent
+
+Ansible            : 45 Minutes
+Terraform          : 45 Minutes
+Kubernetes         : 45 Minutes
+Shell Script       : 20 Minutes
+Jenkins            : 45 Minutes
+GitLab CI          : 40 Minutes
+
+Tomorrow Plan
+
+Docker
+Dockerfile
+Docker Compose
