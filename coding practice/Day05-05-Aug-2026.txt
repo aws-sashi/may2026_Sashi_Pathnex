@@ -1,0 +1,38 @@
+# Ansible - Handler
+tasks:
+- copy:
+    src: index.html
+    dest: /usr/share/nginx/html/index.html
+  notify: Restart Nginx
+
+handlers:
+- name: Restart Nginx
+  service:
+    name: nginx
+    state: restarted
+
+# Terraform - User Data
+resource "aws_instance" "ec2" {
+  instance_type = "c6a.12xlarge"
+
+  user_data = <<EOF
+#!/bin/bash
+yum install -y httpd
+systemctl start httpd
+EOF
+}
+
+# Kubernetes - Resource Limits
+resources:
+  limits:
+    memory: "256Mi"
+    cpu: "500m"
+
+# Jenkins - Environment Variable
+environment {
+  INSTITUTE_NAME = "Pathnex"
+}
+
+# GitLab CI - Variable
+variables:
+  INSTITUTE_NAME: "Pathnex"

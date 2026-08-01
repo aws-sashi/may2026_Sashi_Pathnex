@@ -1,0 +1,12 @@
+Day 05
+
+Completed:
+- Ansible Handlers
+- Terraform User Data
+- Kubernetes Resource Limits
+- Jenkins Environment Variables
+- GitLab CI Variables
+
+Time Spent: 3 Hours
+watch youtube  video 
+
