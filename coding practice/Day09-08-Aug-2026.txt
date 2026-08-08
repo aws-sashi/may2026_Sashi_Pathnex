@@ -1,0 +1,43 @@
+# Ansible - Jinja2 Template
+- name: Deploy config
+  hosts: all
+  become: yes
+  tasks:
+    - template:
+        src: pathnex.conf.j2
+        dest: /etc/pathnex.conf
+
+# Terraform - Internet Gateway
+resource "aws_internet_gateway" "igw" {
+  vpc_id = aws_vpc.pathnex_vpc.id
+  tags = {
+    Name = "Pathnex-IGW"
+  }
+}
+
+# Kubernetes - ConfigMap
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: pathnex-config
+data:
+  APP_MODE: "production"
+  WELCOME_MSG: "Hello Pathnex"
+
+# Shell - CPU Load
+#!/bin/bash
+LOAD=$(uptime | awk '{print $10}')
+echo "CPU Load: $LOAD"
+
+# Jenkins - Archive
+stage('Archive') {
+  steps {
+    archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+  }
+}
+
+# GitLab CI - Artifacts
+artifacts:
+  paths:
+    - target/*.jar
+  expire_in: 1 week

@@ -1,0 +1,12 @@
+Day 09
+
+Done:
+- Ansible Jinja2 Template
+- Terraform Internet Gateway
+- Kubernetes ConfigMap
+- CPU Load Script
+- Jenkins Artifacts
+- GitLab CI Artifacts
+
+Time: 3 Hours
+make  daily video and send telegram chanle
