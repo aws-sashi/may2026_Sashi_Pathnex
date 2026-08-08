@@ -1,0 +1,12 @@
+Day 08
+
+Today's Practice:
+- Ansible variables and package installation
+- Kubernetes health probes
+- GitLab conditional jobs
+
+Main Learning:
+Variables, networking, probes and conditions.
+
+Practice Time: 3 Hours
+make intro viedo daiy base 
