@@ -1,0 +1,11 @@
+Day 10
+
+Done:
+- Ansible Conditions
+- Terraform Route Table
+- Kubernetes Secret
+- Shell Loop
+- Jenkins Maven Cache
+- GitLab CI Cache
+
+Time: 3 Hours

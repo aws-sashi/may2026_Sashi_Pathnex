@@ -1,0 +1,44 @@
+# Ansible
+- hosts: all
+  become: yes
+  tasks:
+    - yum:
+        name: htop
+        state: present
+      when: ansible_facts['os_family'] == "RedHat"
+
+# Terraform
+resource "aws_route_table" "rt" {
+  vpc_id = aws_vpc.pathnex_vpc.id
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.igw.id
+  }
+}
+
+# Kubernetes
+apiVersion: v1
+kind: Secret
+metadata:
+  name: pathnex-secret
+type: Opaque
+data:
+  password: cGF0aG5leDEyMw==
+
+# Shell
+for i in {1..10}; do
+  echo "Number: $i"
+done
+
+# Jenkins
+if [ -d ".m2" ]; then
+  echo "Using cache"
+else
+  mvn clean compile
+fi
+
+# GitLab CI
+cache:
+  key: maven-cache
+  paths:
+    - .m2/repository
