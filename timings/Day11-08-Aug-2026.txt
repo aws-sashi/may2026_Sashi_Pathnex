@@ -1,0 +1,10 @@
+Day 11
+
+Topics:
+- Ansible MariaDB
+- Terraform Output
+
+
+
+Time: 3 Hours
+prepraing mock interview 

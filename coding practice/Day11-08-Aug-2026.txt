@@ -1,0 +1,54 @@
+# Ansible
+- hosts: all
+  become: yes
+  tasks:
+    - yum:
+        name: mariadb-server
+        state: present
+
+    - service:
+        name: mariadb
+        state: started
+        enabled: yes
+
+# Terraform
+resource "aws_instance" "server" {
+  instance_type = "r5.2xlarge"
+}
+
+output "public_ip" {
+  value = aws_instance.server.public_ip
+}
+
+# Kubernetes
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pathnex-sidecar
+spec:
+  containers:
+    - name: main
+      image: nginx
+    - name: sidecar
+      image: busybox
+
+# Shell
+#!/bin/bash
+greet() {
+  echo "Welcome to Pathnex"
+}
+greet
+
+# Jenkins
+post {
+  success {
+    echo "Build Successful"
+  }
+  failure {
+    echo "Build Failed"
+  }
+}
+
+# GitLab CI
+after_script:
+  - echo "Build completed"
